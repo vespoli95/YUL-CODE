@@ -1,0 +1,17 @@
+.container-global{
+  max-width: 100% !important;
+}
+
+.menu {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.menuWidth{
+  width: max-content;
+}
+
+.color-menu{
+  background-color: #444;
+
+}
