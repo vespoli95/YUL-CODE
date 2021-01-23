@@ -64,7 +64,7 @@ export default function Main() {
               <div className="col">
                 <div className="row ">
                   <div className="col-4">
-                    <img src="assets/images/lucas.jpeg" className="imgLinkedin" />
+                    <img src="../assets/images/lucas.jpeg" className="imgLinkedin" />
                   </div>
                   <div className="col-8">
                     <a href="https://www.linkedin.com/in/lucasdaull/" className="nameLinkedin" target="_blank"><b>Lucas DAULL</b></a><br/>

@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import YUL_CODE_White from './assets/images/YUL_CODE_White.png'
 
 import Main from './components/Main'
 
@@ -11,7 +12,7 @@ function App() {
         <nav class="navbar navbar-expand-lg navbar-dark color-menu static-top">
           <div class="container container-global">
             <a class="navbar-brand" href="#">
-              <img src="../assets/images/YUL_CODE_White.png" alt="" style={{width: "150px"}} />
+              <img src={YUL_CODE_White} alt="" style={{width: "150px"}} />
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
