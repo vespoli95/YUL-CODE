@@ -18,7 +18,7 @@ export default function Login() {
 
   const handleSubmit = event => {
     event.preventDefault()
-    axios.post('/login', loginUser)
+    axios.post('/api/login', loginUser)
       .then(res => {
         console.log(res)
       })
