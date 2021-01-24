@@ -4,19 +4,19 @@ const axios = require('axios')
 
 export default function Register() {
   const [registerUser, setRegisterUser] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password1: '',
-    password2: '',
-    heightFeet: '',
-    heightInches: '',
-    age: '',
-    primaryRole: '',
-    secondaryRole: '',
-    country: '',
-    province: '',
-    city: ''
+    firstName: 'alan',
+    lastName: 'tran',
+    email: 'alan@gmail.com',
+    password1: '123',
+    password2: '123',
+    heightFeet: '6',
+    heightInches: '0',
+    age: '24',
+    primaryRole: 'PG',
+    secondaryRole: 'SG',
+    country: 'Canada',
+    province: 'Quebec',
+    city: 'Montreal'
   })
 
   const handleChange = ({ target }) => {
@@ -29,13 +29,15 @@ export default function Register() {
 
   const handleSubmit = event => {
     event.preventDefault()
-    axios.post('/register', registerUser)
-      .then(response => {
-        console.log(response)
-      })
-      .catch(err => {
-        console.log(err)
-      })
+    fetch('/api/register', {
+      method: 'POST',
+      body: JSON.stringify(registerUser),
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8'
+      }
+    })
+      .then(res => console.log(res))
+      .catch(err => console.log(err))
   }
 
   return (

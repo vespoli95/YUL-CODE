@@ -34,7 +34,7 @@ export default function Login() {
         <h1 className="text-center">Please sign in</h1>
         <input type="email" id="email" name="email" className="form-control" placeholder="Email address" onChange={handleChange} required />
         <input type="password" name="password" className="form-control" placeholder="Password" onChange={handleChange} required />
-        <button className="btn btn-primary btn-lg btn-block" type="submit">Sign in</button>
+        <button className="btn btn-primary btn-lg" type="submit">Sign in</button>
       </form>
     </div>
     
