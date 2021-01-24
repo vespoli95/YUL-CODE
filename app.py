@@ -4,11 +4,14 @@ import keys
 from flask import Flask, render_template, request, jsonify, redirect, url_for, session, logging, flash
 from passlib.hash import sha256_crypt
 from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS
+
 
 ENV = 'dev'
 
 app = Flask(__name__, template_folder='templates')
 app.secret_key = keys.SECRET_KEY
+CORS(app)
 # if ENV == 'prod':
 #     app.debug = False
 #     app.config['SQLALCHEMY_DATABASE_URI'] = keys.DB_STRING_PROD
