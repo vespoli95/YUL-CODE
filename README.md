@@ -10,6 +10,6 @@
 6. Navigate to: http://127.0.0.1:5000/
 
 # setup local PostgreSQL database
-Run: python
-Run: from app import db
-Run: db.create_all()
+1. Run: python
+2. Run: from app import db
+3. Run: db.create_all()
