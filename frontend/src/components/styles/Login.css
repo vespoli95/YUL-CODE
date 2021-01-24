@@ -1,0 +1,21 @@
+.Login {
+  background-color: #13131b;
+  background-image: url('https://i.pinimg.com/originals/42/74/0c/42740cb75a02b585beeed724b6522cc1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 1000px;
+}
+
+form.Login__form {
+  padding-top: 25rem;
+  color: #ffffff;
+  width: 20%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Login__form button {
+  margin-top: 2rem;
+}
