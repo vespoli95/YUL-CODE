@@ -62,7 +62,7 @@ def index():
     return render_template('index.html')
 
 # A route to return all of the available entries in our catalog.
-@app.route('/api/register', methods=['GET', 'POST'])
+@app.route('/api/register', methods=['POST'])
 def register():
     req = request.get_json()
     print(req)
@@ -89,6 +89,20 @@ def register():
             db.session.commit()
             return jsonify({'success': 'account created.'})
     return jsonify({'error': 'email already exists!'})
+
+@app.route('/api/login', methods=['POST'])
+def login():
+    req = request.get_json()
+    if request.method == 'POST':
+        email = req['email']
+        password_candidate = req['password']
+        db_record = Users.query.filter_by(email=email).first()
+        record_password = db_record.password
+        if sha256_crypt.verify(password_candidate, record_password):
+            session['logged_in'] = True
+            return jsonify({'success':'you are logged in!'})
+        return jsonify({'error':'wrong password'})
+
 
 # Check if user logged in
 def is_logged_in(f):
