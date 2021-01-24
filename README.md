@@ -12,7 +12,8 @@
 # setup local PostgreSQL database
 1. Install pgAdmin
 2. Create a database named 'GameTime'
-3. Change DB string in keys.py
+3. Add a keys.py file to the root folder:
+  ![keys.py](/documentation/keys_py_file.PNG)
 4. Run: python
 5. Run: from app import db
 6. Run: db.create_all()
