@@ -111,9 +111,14 @@ def is_logged_in(f):
         if 'logged_in' in session:
             return f(*args, **kwargs)
         else:
-            return redirect(url_for('login'))
+            return jsonify({'error':'not logged in'})
     return wrap
 
+# signout
+@app.route('/logout')
+def logout():
+    session.clear()
+    return jsonify({'success':'signed out'})
 
 if __name__ == '__main__':
     app.run()
