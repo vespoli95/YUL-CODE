@@ -4,6 +4,7 @@ const axios = require('axios')
 
 export default function Register() {
   const [registerUser, setRegisterUser] = useState({
+<<<<<<< Updated upstream
     firstName: '',
     lastName: '',
     email: '',
@@ -17,6 +18,20 @@ export default function Register() {
     country: '',
     province: '',
     city: ''
+=======
+    first_name: 'alan',
+    last_name: 'tran',
+    email: 'alan@gmail.com',
+    password: '123',
+    height: '6',
+    age: '24',
+    primary_role: 'PG',
+    secondary_role: 'SG',
+    country: 'Canada',
+    province: 'Quebec',
+    city: 'Montreal',
+    reliability: ''
+>>>>>>> Stashed changes
   })
 
   const handleChange = ({ target }) => {
@@ -50,11 +65,11 @@ export default function Register() {
       <div className="row">
         <div className="col-3">
           <label for="firstName" className="form-label">First name</label>
-          <input type="text" className="form-control" id="firstName" name="firstName" onChange={handleChange} />
+          <input type="text" className="form-control" id="firstName" name="first_name" onChange={handleChange} />
         </div>
         <div className="col-3">
           <label for="lastName" className="form-label">Last name</label>
-          <input type="text" className="form-control" id="lastName" name="lastName" onChange={handleChange} />
+          <input type="text" className="form-control" id="lastName" name="last_name" onChange={handleChange} />
         </div>
       </div>
       <div className="row">
