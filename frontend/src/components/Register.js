@@ -4,21 +4,6 @@ const axios = require('axios')
 
 export default function Register() {
   const [registerUser, setRegisterUser] = useState({
-<<<<<<< Updated upstream
-    firstName: '',
-    lastName: '',
-    email: '',
-    password1: '',
-    password2: '',
-    heightFeet: '',
-    heightInches: '',
-    age: '',
-    primaryRole: '',
-    secondaryRole: '',
-    country: '',
-    province: '',
-    city: ''
-=======
     first_name: 'alan',
     last_name: 'tran',
     email: 'alan@gmail.com',
@@ -31,7 +16,6 @@ export default function Register() {
     province: 'Quebec',
     city: 'Montreal',
     reliability: ''
->>>>>>> Stashed changes
   })
 
   const handleChange = ({ target }) => {
@@ -44,13 +28,15 @@ export default function Register() {
 
   const handleSubmit = event => {
     event.preventDefault()
-    axios.post('/register', registerUser)
-      .then(response => {
-        console.log(response)
-      })
-      .catch(err => {
-        console.log(err)
-      })
+    fetch('/api/register', {
+      method: 'POST',
+      body: JSON.stringify(registerUser),
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8'
+      }
+    })
+      .then(res => console.log(res))
+      .catch(err => console.log(err))
   }
 
   return (

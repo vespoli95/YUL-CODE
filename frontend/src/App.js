@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Register />
       <Login />
-    </div>
+    </div> 
   );
 }
 
