@@ -10,6 +10,9 @@
 6. Navigate to: http://127.0.0.1:5000/
 
 # setup local PostgreSQL database
-1. Run: python
-2. Run: from app import db
-3. Run: db.create_all()
+1. Install pgAdmin
+2. Create a database named 'GameTime'
+3. Change DB string in keys.py
+4. Run: python
+5. Run: from app import db
+6. Run: db.create_all()
