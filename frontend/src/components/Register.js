@@ -8,7 +8,7 @@ export default function Register() {
     last_name: 'tran',
     email: 'alan@gmail.com',
     password: '123',
-    height: '6',
+    height: '',
     age: '24',
     primary_role: 'PG',
     secondary_role: 'SG',
@@ -61,7 +61,7 @@ export default function Register() {
       <div className="row">
         <div className="col-3">
           <label for="password1" className="form-label">Password</label>
-          <input type="password" className="form-control" id="password1" name="password1" onChange={handleChange} />
+          <input type="password" className="form-control" id="password1" name="password" onChange={handleChange} />
         </div>
         <div className="col-3">
           <label for="password2" className="form-label">Repeat password</label>
@@ -72,32 +72,32 @@ export default function Register() {
         <label for="height">Height</label>
         <div className="col-1">
           <div className="input-group">
-            <select className="form-select" id="height" name="heightFeet" onChange={handleChange} >
-              <option value={4}>4</option>
-              <option value={5}>5</option>
-              <option value={6}>6</option>
-              <option value={7}>7</option>
+            <select className="form-select" id="height" name="height" onChange={handleChange} >
+              <option value="5'0">5'0"</option>
+              <option value="5'1">5'1"</option>
+              <option value="5'2">5'2"</option>
+              <option value="5'3">5'3"</option>
+              <option value="5'4">5'4"</option>
+              <option value="5'5">5'5"</option>
+              <option value="5'6">5'6"</option>
+              <option value="5'7">5'7"</option>
+              <option value="5'8">5'8"</option>
+              <option value="5'9">5'9"</option>
+              <option value="5'10">5'10"</option>
+              <option value="5'11">5'11"</option>
+              <option value="6'0">6'0"</option>
+              <option value="6'1">6'1"</option>
+              <option value="6'2">6'2"</option>
+              <option value="6'3">6'3"</option>
+              <option value="6'4">6'4"</option>
+              <option value="6'5">6'5"</option>
+              <option value="6'6">6'6"</option>
+              <option value="6'7">6'7"</option>
+              <option value="6'8">6'8"</option>
+              <option value="6'9">6'9"</option>
+              <option value="6'10">6'10"</option>
+              <option value="6'11">6'11"</option>
             </select>
-            <span className="input-group-text">ft</span>
-          </div>
-        </div>
-        <div className="col-1">
-          <div className="input-group">
-            <select className="form-select" name="heightInches" onChange={handleChange}>
-              <option value={0}>0</option>
-              <option value={1}>1</option>
-              <option value={2}>2</option>
-              <option value={3}>3</option>
-              <option value={4}>4</option>
-              <option value={5}>5</option>
-              <option value={6}>6</option>
-              <option value={7}>7</option>
-              <option value={8}>8</option>
-              <option value={9}>9</option>
-              <option value={10}>10</option>
-              <option value={11}>11</option>
-            </select>
-            <span className="input-group-text">in</span>
           </div>
         </div>
       </div>
@@ -110,23 +110,23 @@ export default function Register() {
       <div className="row">
         <div className="col-2">
           <label for="primaryRole" className="form-label">Primary role</label>
-            <select className="form-select" id="primaryRole" name="primaryRole" onChange={handleChange}>
-            <option value="Point guard">Point guard</option>
-            <option value="Shooting guard">Shooting guard</option>
-            <option value="Center">Center</option>
-            <option value="Small forward">Small forward</option>
-            <option value="Power forward">Power forward</option>
+            <select className="form-select" id="primaryRole" name="primary_role" onChange={handleChange}>
+            <option value="PG">Point guard</option>
+            <option value="SG">Shooting guard</option>
+            <option value="C">Center</option>
+            <option value="SF">Small forward</option>
+            <option value="PF">Power forward</option>
           </select>
         </div>
         <div className="col-2">
           <label for="secondaryRole" className="form-label">Secondary role</label>
-          <select className="form-select" id="secondaryRole" name="secondaryRole" onChange={handleChange}>
+          <select className="form-select" id="secondaryRole" name="secondary_role" onChange={handleChange}>
             <option value="">None</option>
-            <option value="Point guard">Point guard</option>
-            <option value="Shooting guard">Shooting guard</option>
-            <option value="Center">Center</option>
-            <option value="Small forward">Small forward</option>
-            <option value="Power forward">Power forward</option>
+            <option value="PG">Point guard</option>
+            <option value="SG">Shooting guard</option>
+            <option value="C">Center</option>
+            <option value="SF">Small forward</option>
+            <option value="PF">Power forward</option>
           </select>
         </div>
       </div>
